@@ -62,10 +62,10 @@ function App() {
       Si Se Logguea Entonces Muestra La Pantalla De Busqueda */}
       <div className="container-fluid">
         {keycloak && keycloak.authenticated ? (
-          <>
-            <h2 className="text-center">Search</h2>
+          <div className="container">
+            <h2 className="text-primary mb-4">Bienvenido {`${keycloak.tokenParsed.name} `}</h2>
             <SearchComponent />
-          </>
+          </div>
         ) : null}
       </div>
     </>
